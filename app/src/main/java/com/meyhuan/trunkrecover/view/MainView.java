@@ -7,5 +7,8 @@ import com.hannesdorfmann.mosby.mvp.MvpView;
  * Date  : 2017/5/16
  */
 
-public class MainView implements MvpView{
+public interface MainView extends MvpView{
+
+    void setUserInfo(String userInfo);
+
 }

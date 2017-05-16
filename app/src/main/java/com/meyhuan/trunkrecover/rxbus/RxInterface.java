@@ -10,8 +10,6 @@ public interface RxInterface {
     class RxEvent implements RxInterface {
     }
 
-
-
     class SingleEvent<T> extends RxEvent{
         public T param1;
 

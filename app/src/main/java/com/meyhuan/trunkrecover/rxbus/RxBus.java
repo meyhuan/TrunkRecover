@@ -28,8 +28,8 @@ public class RxBus {
 
 
     //向注册的观察者分发事件
-    public void post(RxInterface rxInterface){
-        bus.onNext(rxInterface);
+    public void post(RxInterface.RxEvent event){
+        bus.onNext(event);
     }
 
     //注册事件，返回被观察者用于注销注册

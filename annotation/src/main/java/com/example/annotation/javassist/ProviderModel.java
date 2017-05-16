@@ -10,6 +10,6 @@ import java.lang.annotation.Target;
  * Date  : 2017/5/16
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
+@Target(ElementType.FIELD)
 public @interface ProviderModel {
 }

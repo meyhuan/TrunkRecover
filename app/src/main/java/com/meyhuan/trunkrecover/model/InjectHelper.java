@@ -4,6 +4,8 @@ import android.app.Application;
 import android.os.Handler;
 import android.os.HandlerThread;
 
+import com.meyhuan.trunkrecover.MyApp;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -23,6 +25,10 @@ public class InjectHelper {
         HandlerThread ioThread = new HandlerThread("IOThread");
         ioThread.start();
         ioHanler = new Handler(ioThread.getLooper());
+    }
+
+    public static void init(MyApp myApp) {
+        context = myApp;
     }
 
     private static void initModel(Class<? extends Model> clazz) {
@@ -46,4 +52,6 @@ public class InjectHelper {
         }
         return model;
     }
+
+
 }

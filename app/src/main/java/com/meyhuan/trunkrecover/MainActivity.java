@@ -3,7 +3,10 @@ package com.meyhuan.trunkrecover;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.meyhuan.trunkrecover.presenter.MainPresenter;
+import com.meyhuan.trunkrecover.view.MainView;
+
+public class MainActivity extends BaseMvpActivity<MainView, MainPresenter> {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

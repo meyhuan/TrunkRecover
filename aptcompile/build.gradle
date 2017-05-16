@@ -1,0 +1,17 @@
+apply plugin: 'java'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //注解 Processor 类，并对其生成 META_INF 的配置文件
+    compile 'com.google.auto.service:auto-service:1.0-rc2'
+    //通过类的调用 的形式，来生成代码
+    compile 'com.squareup:javapoet:1.7.0'
+    compile project(':annotation')
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
